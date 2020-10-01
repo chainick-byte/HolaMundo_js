@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="diaDeHoy"></h1>
+    <button onclick="dimeDia()">que dia es hoy???</button>
+    
+
+    <script>
+        function dimeDia(){
+            var objectFecha=new Date();
+            var diaDeLaSemana=objectFecha.getDay();
+            var diaPresente;
+            switch(diaDeLaSemana){
+                case 1: diaPresente="Lunes";    break
+                case 2: diaPresente="Martes";   break
+                case 3: diaPresente="Miercoles";break
+                case 4: diaPresente="Jueves";   break
+                case 5: diaPresente="Viernes";  break
+                case 6: diaPresente="Sabado";   break
+                case 0: diaPresente="Domingo";  break
+            }
+            document.getElementById('diaDeHoy').innerHTML=diaPresente;
+        }
+    </script>
+</body>
+</html>

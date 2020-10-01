@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cabecera"></h1>
+    <input id="Submit1" type="submit" value="dale" onclick="prueba()"/>
+    <input id="Submit2" type="submit" value="dale_1" onclick="prueba_1()"/>
+    <input id="Submit3" type="submit" value="dale_2" onclick="prueba_2()"/>
+    <input id="Submit3" type="submit" value="dale_3" onclick="prueba_3()"/>
+   
+
+    <script>
+        //funcion anonima se utilizan solo una vez y su resultado se guarda en una variable
+        function sumaDeDos(A,B){
+            return(A+B);
+        }
+
+        function prueba(){
+            var suma=sumaDeDos(133,927);
+            console.log(suma);
+            document.write(suma);
+        }
+
+        function sumaArguments(){
+            var resultado=0;
+            for(var i in arguments){
+                resultado+=arguments[i];
+            }
+            return resultado;
+        }
+        function prueba_1(){
+            document.write(sumaArguments(12,43,22,54,679,257,1333));
+        }
+        //ejemplo de funcion anonima,esta funcion esta en una variable, y es llamada cuando es solicitada la variable
+        var suma=(function(){
+            var resultado=0;
+            for(i in arguments){
+                resultado+=arguments[i];      
+            }
+            return resultado;
+        })(12,54,34,22,67,877,23,567)
+        function prueba_2(){
+            document.write(suma);
+        }
+        //otra form de declara la funcion anonima
+        function prueba_3(){
+            document.write(function(){
+                var resultado=0;
+            for(i in arguments){
+                resultado+=arguments[i];      
+            }
+            return resultado
+            }(12,54,34,22,67,877,23,567))
+        }
+    </script>
+
+
+</body>
+
+</html>

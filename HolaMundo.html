@@ -12,15 +12,30 @@
 
     <title>Hello, world!</title>
     <script type="text/javascript">
-        for (var i = 1; i < 7; i++) {
-            document.write("<h" + i + ">Hola mundo</h" + i + ">");
-            console.log("<h" + i + ">Hola mundo</h" + i + ">");
-        }
+        function cambiaTexto() {
+            var auxiliar="";
+             
+            for (var i = 1;i < 7;i++){
+             
+                auxiliar="<h" + i + ">Hola mundo</h" + i + ">";
+                console.log("<h" + i + ">Hola mundo</h" + i + ">");
+                document.getElementById('titulo_'+i).innerHTML = auxiliar;
+                
+            }
+
+
+        }      
     </script>
 </head>
 
 <body>
-
+    <div id='titulo_1'></div>
+    <div id='titulo_2'></div>
+    <div id='titulo_3'></div>
+    <div id='titulo_4'></div>
+    <div id='titulo_5'></div>
+    <div id='titulo_6'></div>
+    <button onclick="cambiaTexto()">Pulsame</button>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

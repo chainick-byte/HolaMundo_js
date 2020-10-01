@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="ejemploArrays()">dale</button>
+    <button onclick="ejemploArraysClassicos()">dale duro</button>
+    <button onclick="ejemploDelSplit()">separame</button>
+    <script>
+        function ejemploArrays() {
+            var listadoFamilias = [];
+            var auxiliar = "";
+            listadoFamilias['perez'] = 3;
+            listadoFamilias['rodriguez'] = 2;
+            listadoFamilias['lopez'] = 7;
+            listadoFamilias['vinniye de pooh'] = 0;
+            listadoFamilias['wayne'] = 1;
+
+            for (var familias in listadoFamilias) {
+
+                auxiliar = (listadoFamilias[familias] == 1) ? "hijo" : "hijos";
+                document.write("familia " + familias + " tiene " + listadoFamilias[familias] + " " + auxiliar + "<br>    ");
+            }
+            
+        }
+        function ejemploArraysClassicos() {
+                const elementos = ['air', 'water', 'fire', 'earth'];
+                //join une elementos de una array por medio de digitos que introduzcamos en sus argumentos
+                console.log(elementos.join());
+                console.log(elementos.join(' '));
+                console.log(elementos.join('-'));
+                console.log(elementos.join(' ¿quien vive en el fondo de mar? '));
+            }
+        function ejemploDelSplit(){
+            var cadena="frfrfrffrf--frfrrfrf--trtrtrtr--erererere--reerererwwww--weweweweww--trtrtr";
+            var arraysSeparadas=cadena.split('--');
+
+            for(var elemento in arraysSeparadas){
+                document.write(arraysSeparadas[elemento]+"  ");
+            }
+        }
+    </script>
+</body>
+
+</html>

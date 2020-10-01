@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="name"></h1>
+    <h1 id="name_1"></h1>
+    <h1 id="name_2"></h1>
+    <button onclick="ifTerneario()">Pulasme!!!</button>
+
+    <script>
+        function ifTerneario() {
+            var objectFecha = new Date();
+            var diaDeHoy = objectFecha.getDay();
+            console.log(diaDeHoy);
+            diaDeLaSemana = (diaDeHoy == 4) ? "jueves" : "Hoy no es Jueves";
+            diaDeLaSemana_1 = (diaDeHoy==0||diaDeHoy==6)?"fin de semana":"dia laboral";
+            diaDeLaSemana_2 = (diaDeHoy>0 && diaDeHoy<6)?"dia de la semana laboral": "fin de semana";
+            document.getElementById('name').innerHTML = diaDeLaSemana;
+            document.getElementById('name_1').innerHTML = diaDeLaSemana_1;
+            document.getElementById('name_2').innerHTML = diaDeLaSemana_2;
+        }
+        
+    </script>
+
+</body>
+
+</html>

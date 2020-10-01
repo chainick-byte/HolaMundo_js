@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="name"></h1>
+
+    <input type="text" id="textoNoBlanco" />
+    <button onclick="comprobarForm()">Pulasme!!!</button>
+
+    <script>
+        function comprobarForm() {
+            var variableForm = document.getElementById('textoNoBlanco').value;
+            if (variableForm.length == 0) {
+                alert('Rellena el formulario');
+            } else {
+                document.getElementById('name').innerHTML = variableForm;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
