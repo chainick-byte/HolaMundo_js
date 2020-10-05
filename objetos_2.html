@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var equipo=function(nombre,color,estadio){
+            this.nombre=nombre;
+            this.color=color;
+            this.estadio=estadio;
+            this.muestaInfo=function(){
+                document.write(this.nombre + this.estadio);
+            }
+        }
+        var equipo1=new equipo("Numancia","Rojo","Los Pajaritos");
+        alert(equipo1.muestaInfo);
+    </script>
+</body>
+</html>
